@@ -46,11 +46,27 @@ body {
 
 	background-color: #323232;
 }
-.menu img {
-	width: 45px;
+.btns {
+	padding: 10px;
+	/* transform: translate(-50%, -50%); */
+
+	width: 40px;
+	height: 40px;
 }
 .menu a {
-	margin-top: 25px;
+	margin-top: 15px;
+
+	width: 60px;
+	height: 60px;
+
+	transition: 0.1s;
+}
+.menu a:hover {
+	border-radius: 100px;
+
+	background-color: #444444;
+
+	transition: 0.1s;
 }
 
 .divider {
