@@ -54,6 +54,8 @@ body {
 	height: 40px;
 }
 .menu a {
+	user-select: none;
+
 	margin-top: 15px;
 
 	width: 60px;
@@ -67,6 +69,11 @@ body {
 	background-color: #444444;
 
 	transition: 0.1s;
+}
+.menu a:active {
+	border-radius: 100px;
+
+	background-color: #272727;
 }
 
 .divider {
