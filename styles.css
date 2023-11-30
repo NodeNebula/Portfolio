@@ -57,7 +57,9 @@ main {
 
 .skills {
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+
 
 	margin-top: 125px;
 	margin-left: 50px;
@@ -66,6 +68,8 @@ main {
 }
 .skill-card {
 	display: flex;
+
+	margin-bottom: 50px;
 
 	border-radius: 10px;
 
@@ -96,15 +100,43 @@ main {
 	width: 75%;
 }
 .skill-title {
-	margin-top: 0;
+	margin-top: 8px;
 
 	font-size: 25px;
 	font-weight: bold;
 }
 .skill-desc {
 	margin-top: -20px;
+
+	color: rgba(255, 255, 255, 0.719);
+}
+.skill-progress-bar {
+	margin-top: 20px;
+
+	border-radius: 10px;
+
+	width: 93%;
+	height: 10px;
+
+	background-color: #1A1A1A;
 }
 
+/* Progress bars */
+.skill-progress {
+	border-radius: 10px;
+
+	height: 100%;
+}
+
+.html-progress {
+	width: 90%;
+	background-color: orangered;
+}
+.css-progress {
+	width: 85%;
+	background-color: dodgerblue;
+}
+/*  */
 
 .info {
 	width: 40%;
