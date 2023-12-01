@@ -48,7 +48,6 @@ body {
 }
 .btns {
 	padding: 10px;
-	/* transform: translate(-50%, -50%); */
 
 	width: 40px;
 	height: 40px;
@@ -192,6 +191,18 @@ main {
 .js-progress {
 	width: 75%;
 	background-color: yellow;
+}
+.java-progress {
+	width: 50%;
+	background-color: red;
+}
+.py-progress {
+	width: 70%;
+	background-color: rgb(255, 208, 0);
+}
+.php-progress {
+	width: 80%;
+	background-color: rgb(88, 109, 172);
 }
 /*  */
 
