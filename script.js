@@ -1,6 +1,7 @@
 var scrollContainer = document.getElementById('black-circle');
 var scrollContent = document.getElementById('menu');
 var isScrolling = false;
+var lastActiveTab = "nav-home";
 
 scrollContainer.addEventListener('wheel', function(event) {
   if (!isScrolling) {
@@ -102,7 +103,58 @@ function scrollMenu(event) {
       }
       
       break;
-      
+  }
+  switchTab();
+}
+
+function switchTab() {
+  var currentActive = document.getElementsByClassName("stage0")[0].id;
+  var home = document.getElementsByClassName("home")[0];
+  var front = document.getElementsByClassName("front")[0];
+  var wback = document.getElementsByClassName("wback")[0];
+  var sback = document.getElementsByClassName("sback")[0];
+
+  switch (currentActive) {
+    case "nav-home":
+      if (lastActiveTab == "nav-home") break;
+      home.style.opacity = "1";
+
+      front.style.opacity = "0";
+      wback.style.opacity = "0";
+      sback.style.opacity = "0";
+
+      lastActiveTab = "nav-home";
+      break;
+    case "nav-front":
+      if (lastActiveTab == "nav-front") break;
+      front.style.opacity = "1";
+
+      home.style.opacity = "0";
+      wback.style.opacity = "0";
+      sback.style.opacity = "0";
+
+      lastActiveTab = "nav-front";
+      break;
+    case "nav-wback":
+      if (lastActiveTab == "nav-wback") break;
+      wback.style.opacity = "1";
+
+      home.style.opacity = "0";
+      front.style.opacity = "0";
+      sback.style.opacity = "0";
+
+      lastActiveTab = "nav-wback";
+      break;
+    case "nav-sback":
+      if (lastActiveTab == "nav-sback") break;
+      sback.style.opacity = "1";
+
+      home.style.opacity = "0";
+      front.style.opacity = "0";
+      wback.style.opacity = "0";
+
+      lastActiveTab = "nav-sback";
+      break;
     default:
       break;
   }
