@@ -24,7 +24,7 @@ body {
   
   background-color: black;
   filter: blur(60px);
-  opacity: 75%;
+  opacity: 85%;
 }
 
 .menu {
@@ -124,6 +124,11 @@ body {
   opacity: 10%;
 }
 
+.panel {
+  opacity: 0;
+
+  transition: .25s;
+}
 .background {
   position: absolute;
   z-index: -1;
@@ -133,54 +138,61 @@ body {
   opacity: 25%;
 }
 
-.home {
+#home {
   opacity: 1;
-
-  transition: .25s;
 }
-.home .background {
+#home .background {
   top: -50px;
   left: 100px;
   
   width: 120vw;
   height: 120vh;
 }
-
-.front {
-  opacity: 0;
-
-  transition: .25s;
-}
-.front .background {
+#front .background {
   top: -50px;
   left: 200px;
   
   width: 150vw;
   height: 150vh;
 }
-
-.wback {
-  opacity: 0;
-
-  transition: .25s;
-}
-.wback .background {
+#wback .background {
   left: 50px;
   
   width: 110vw;
   height: 110vh;
 }
-
-.sback {
-  opacity: 0;
-
-  transition: .25s;
-}
-.sback .background {  
+#sback .background {  
   left: -200px;
   
   transform: scaleX(-1);
   
   width: 175vw;
   height: 175vh;
+}
+
+
+.home-about-text {
+  position: absolute;
+
+  margin-top: 40px;
+  margin-left: 470px;
+
+  width: 800px;
+
+  font-family: Akaya Kanadaka;
+}
+.home-title {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.75);
+
+  font-size: 60px;
+}
+.par {
+  margin-top: 0;
+  margin-left: 50px;
+
+  color: rgba(255, 255, 255, 0.6);
+
+  font-size: 28px;
 }

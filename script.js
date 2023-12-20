@@ -1,7 +1,13 @@
-var scrollContainer = document.getElementById('black-circle');
-var scrollContent = document.getElementById('menu');
+const scrollContainer = document.getElementById('black-circle');
+const scrollContent = document.getElementById('menu');
+
 var isScrolling = false;
 var lastActiveTab = "nav-home";
+
+const home = document.getElementById("home");
+const front = document.getElementById("front");
+const wback = document.getElementById("wback");
+const sback = document.getElementById("sback");
 
 scrollContainer.addEventListener('wheel', function(event) {
   if (!isScrolling) {
@@ -9,7 +15,7 @@ scrollContainer.addEventListener('wheel', function(event) {
     scrollMenu(event);
     setTimeout(function() {
       isScrolling = false;
-    }, 250); // Adjust the delay (in milliseconds) as needed
+    }, 250);
   }
 });
 
@@ -19,7 +25,7 @@ scrollContent.addEventListener('wheel', function(event) {
     scrollMenu(event);
     setTimeout(function() {
       isScrolling = false;
-    }, 250); // Adjust the delay (in milliseconds) as needed
+    }, 250);
   }
 });
 
@@ -109,10 +115,6 @@ function scrollMenu(event) {
 
 function switchTab() {
   var currentActive = document.getElementsByClassName("stage0")[0].id;
-  var home = document.getElementsByClassName("home")[0];
-  var front = document.getElementsByClassName("front")[0];
-  var wback = document.getElementsByClassName("wback")[0];
-  var sback = document.getElementsByClassName("sback")[0];
 
   switch (currentActive) {
     case "nav-home":
