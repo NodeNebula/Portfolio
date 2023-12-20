@@ -113,8 +113,29 @@ function scrollMenu(event) {
   switchTab();
 }
 
-function switchTab() {
-  var currentActive = document.getElementsByClassName("stage0")[0].id;
+document.getElementById("nav-home").addEventListener("click", function() {
+  switchTab("nav-home");
+  scrollOnClick("nav-home");
+});
+document.getElementById("nav-front").addEventListener("click", function() {
+  switchTab("nav-front")
+  scrollOnClick("nav-front");
+});
+document.getElementById("nav-wback").addEventListener("click", function() {
+  switchTab("nav-wback")
+  scrollOnClick("nav-wback");
+});
+document.getElementById("nav-sback").addEventListener("click", function() {
+  switchTab("nav-sback")
+  scrollOnClick("nav-sback");
+});
+
+
+function switchTab(goTo) {
+  console.log("triggered")
+  var currentActive;
+  if (goTo != null) currentActive = goTo;
+  else currentActive = document.getElementsByClassName("stage0")[0].id;
 
   switch (currentActive) {
     case "nav-home":
@@ -159,5 +180,39 @@ function switchTab() {
       break;
     default:
       break;
+  }
+}
+
+function scrollOnClick(goTo) {
+  const nHome = document.getElementById("nav-home");
+  const nFront = document.getElementById("nav-front");
+  const nwBack = document.getElementById("nav-wback");
+  const nsBack = document.getElementById("nav-sback");
+
+  switch (goTo) {
+    case "nav-home":
+      nHome.className = "nav-btn stage0";
+      nFront.className = "nav-btn stage1";
+      nwBack.className = "nav-btn stage2";
+      nsBack.className = "nav-btn stage3";
+    break;
+    case "nav-front":
+      nHome.className = "nav-btn stage-1";
+      nFront.className = "nav-btn stage0";
+      nwBack.className = "nav-btn stage1";
+      nsBack.className = "nav-btn stage2";
+    break;
+    case "nav-wback":
+      nHome.className = "nav-btn stage-2";
+      nFront.className = "nav-btn stage-1";
+      nwBack.className = "nav-btn stage0";
+      nsBack.className = "nav-btn stage1";
+    break;
+    case "nav-sback":
+      nHome.className = "nav-btn stage-3";
+      nFront.className = "nav-btn stage-2";
+      nwBack.className = "nav-btn stage-1";
+      nsBack.className = "nav-btn stage0";
+    break;
   }
 }
