@@ -17,6 +17,7 @@ fetch('https://api.ipregistry.co/?key=tryout')
         if (payload.location.country.name === "Netherlands") {
           console.log(true)
         }
+        console.log(false)
     });
 
 scrollContainer.addEventListener('wheel', function(event) {
