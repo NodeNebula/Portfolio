@@ -9,17 +9,6 @@ const front = document.getElementById("front");
 const wback = document.getElementById("wback");
 const sback = document.getElementById("sback");
 
-fetch('https://api.ipregistry.co/?key=tryout')
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (payload) {
-        if (payload.location.country.name === "Netherlands") {
-          console.log(true)
-        }
-        console.log(false)
-    });
-
 scrollContainer.addEventListener('wheel', function(event) {
   if (!isScrolling) {
     isScrolling = true;
