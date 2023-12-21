@@ -204,3 +204,46 @@ body {
   margin: 0;
   margin-bottom: 12px;
 }
+
+.projects {
+  position: absolute;
+  z-index: 10;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  margin-top: 3.5%;
+  margin-left: 470px;
+
+  width: 800px;
+  height: 86%;
+
+  font-family: Akaya Kanadaka;
+}
+.project {
+  margin-left: 100px;
+
+  border-radius: 100%;
+
+  width: 150px;
+  height: 150px;
+
+  background-color: white;
+
+  cursor: pointer;
+
+  transition: .25s;
+}
+.project.orange:hover {
+  box-shadow: 0 0 25px rgb(255, 177, 76);
+}
+.project.green:hover {
+  box-shadow: 0 0 25px rgb(93, 255, 114);
+}
+.project.blue:hover {
+  box-shadow: 0 0 25px rgb(106, 158, 255);
+}
+.p2 {
+  margin-left: 150px;
+}
