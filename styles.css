@@ -213,11 +213,11 @@ body {
   flex-direction: column;
   justify-content: space-between;
 
-  margin-top: 3.5%;
+  margin-top: 5%;
   margin-left: 470px;
 
   width: 800px;
-  height: 86%;
+  height: 80%;
 
   font-family: Akaya Kanadaka;
 }
@@ -246,4 +246,61 @@ body {
 }
 .p2 {
   margin-left: 150px;
+}
+
+.project-bg {
+  position: relative;
+  z-index: -1;
+
+  display: flex;
+  align-items: center;
+
+  margin-top: 12px;
+  margin-left: 75px;
+
+  border-radius: 30px;
+
+  padding-left: 100px;
+
+  width: 780px;
+  height: 125px;
+
+  user-select: none;
+  cursor: default;
+
+  opacity: 0;
+
+  background-color: rgba(255, 255, 255, 0.25);
+
+  color: white;
+
+  transition: .25s;
+}
+.pj-title {
+  margin: 0;
+  margin-bottom: 10px;
+
+  font-size: 44px;
+}
+.pj-desc {
+  margin: 0;
+  margin-left: 20px;
+
+  padding-bottom: 10px;
+  
+  font-size: 24px;
+}
+.links-con {
+  margin-left: auto;
+  margin-right: 10px;
+}
+.links {
+  margin-right: 20px;
+
+  width: 50px;
+  height: 50px;
+}
+
+.project-bg.active {
+  opacity: 1;
 }

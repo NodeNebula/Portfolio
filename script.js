@@ -30,6 +30,7 @@ scrollContent.addEventListener('wheel', function(event) {
 });
 
 function scrollMenu(event) {
+  projectOpacity();
   var scrollDirection = event.deltaY > 0 ? 'down' : 'up';
   
   switch(scrollDirection) {
@@ -132,7 +133,6 @@ document.getElementById("nav-sback").addEventListener("click", function() {
 
 
 function switchTab(goTo) {
-  console.log("triggered")
   var currentActive;
   if (goTo != null) currentActive = goTo;
   else currentActive = document.getElementsByClassName("stage0")[0].id;
@@ -184,6 +184,8 @@ function switchTab(goTo) {
 }
 
 function scrollOnClick(goTo) {
+  projectOpacity();
+
   const nHome = document.getElementById("nav-home");
   const nFront = document.getElementById("nav-front");
   const nwBack = document.getElementById("nav-wback");
@@ -214,5 +216,19 @@ function scrollOnClick(goTo) {
       nwBack.className = "nav-btn stage-1";
       nsBack.className = "nav-btn stage0";
     break;
+  }
+}
+
+function projectClick(clicked) {
+  projectOpacity();
+  clicked.getElementsByClassName("project-bg")[0].style.opacity = "1";
+}
+
+function projectOpacity() {
+  var divs = document.getElementsByClassName("project");
+  console.log("dv: " + divs)
+  for (const element of divs) {
+    console.log("el: " + element)
+    element.getElementsByClassName("project-bg")[0].style.opacity = "0";
   }
 }
